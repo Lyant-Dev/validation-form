@@ -14,24 +14,50 @@
   </head>
   <body>
     <div class="form-container" id="form-container">
-      <i class="ri-send-ins-line icon"></i>
+      <i class="ri-send-plane-fill icon"></i>
       <form action="/action" class="form-data">
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name" placeholder="enter your name" required />
-        <label for="number">Number: </label>
-        <input type="number" name="number" id="number"  placeholder="0811 1111 1111" required />
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email"  placeholder="youremail@gmail.com" required />
-        <label for="message">Enter your message here: </label>
-        <textarea
-          name="message"
-          id="message"
-          rows="7"
-          cols="32"
-           placeholder="enter your message here"
-          required
-
-        ></textarea>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="enter your name"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label for="number">Number</label>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="0811 1111 1111"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@gmail.com"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="7"
+            cols="32"
+            placeholder="enter your message here"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
       </form>
     </div>
     <!-- ================ SCRIPT JS ==============  -->
