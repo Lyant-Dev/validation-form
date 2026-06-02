@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: hsl(197, 91%, 27%);
+  font-family: "PT Sans Narrow", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  border: 0px solid black;
+  border-radius: 1.2rem;
+  background-color: hsl(200, 0%, 29%);
+}
+.form-data {
+  display: inline-block;
+}
