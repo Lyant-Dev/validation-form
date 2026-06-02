@@ -6,8 +6,32 @@
     <title>Validation Form</title>
     <!-- ============== STYLE CSS ============ -->
     <link rel="stylesheet" href="style.css" />
+    <!-- ============= REMIX ICONS ==============  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="form-container" id="form-container">
+      <i class="ri-send-ins-line icon"></i>
+      <form action="/action">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required />
+        <label for="number">Number: </label>
+        <input type="number" name="number" id="number" required />
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required />
+        <label for="message">Enter your message here: </label>
+        <textarea
+          name="message"
+          id="message"
+          rows="7"
+          cols="32"
+          required
+        ></textarea>
+      </form>
+    </div>
     <!-- ================ SCRIPT JS ==============  -->
     <script src="app.js"></script>
   </body>
