@@ -18,6 +18,7 @@ function validateName() {
 }
 nameInput.addEventListener("blur", validateName);
 
-// TODO besok:
-// - Tambah kondisi 3: karakter spesial (pakai regex)
-// - Pelajari basic regex pattern buat huruf + apostrof
+// TODO next session:
+// - Refactor: bikin function showError(input, message)
+// - Replace console.log → tampil di DOM (di bawah field)
+// - Atau: lanjut validateNumber pakai pattern yg sama
