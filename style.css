@@ -42,13 +42,29 @@ body {
 }
 .form-row {
   display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.form-input-group {
+  display: flex;
   flex-direction: row;
   align-items: baseline;
   font-size: 2.5rem;
   font-weight: 300;
   gap: 5rem;
 }
-.form-row:has(textarea) {
+.error-message {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: red;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  min-height: 1.6rem;
+
+}
+.form-input-group:has(textarea) {
   align-items: center; /* sejajar atas */
 }
 .form-row input,

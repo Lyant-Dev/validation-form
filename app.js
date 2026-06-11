@@ -5,20 +5,21 @@ const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
 const submitBtn = document.querySelector(".submit-btn");
 const namePattern = /^[a-zA-Z\s']+$/;
+const nameError = document.querySelector("#name-error");
+const numberError = document.querySelector("#number-error");
+const emailError = document.querySelector("#email-error");
+const messageError = document.querySelector("#message-error");
 
 function validateName() {
   const value = nameInput.value.trim();
   if (value === "") {
-    console.log("Nama wajib diisi!");
+    nameError.textContent = "Nama wajib diisi!";
   } else if (value.length < 2) {
-    console.log("Tidak boleh kurang dari 2 karakter");
+    nameError.textContent = "Tidak boleh kurang dari 2 karakter";
   } else if (!namePattern.test(value)) {
-    console.log("Nama hanya boleh huruf dan apostrof (')");
+    nameError.textContent = "Nama hanya boleh huruf dan apostrof (')";
+  } else {
+    nameError.textContent = "";
   }
 }
 nameInput.addEventListener("blur", validateName);
-
-// TODO next session:
-// - Refactor: bikin function showError(input, message)
-// - Replace console.log → tampil di DOM (di bawah field)
-// - Atau: lanjut validateNumber pakai pattern yg sama
