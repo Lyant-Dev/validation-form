@@ -5,6 +5,7 @@ const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
 const submitBtn = document.querySelector(".submit-btn");
 const namePattern = /^[a-zA-Z\s']+$/;
+
 const nameError = document.querySelector("#name-error");
 const numberError = document.querySelector("#number-error");
 const emailError = document.querySelector("#email-error");
@@ -22,4 +23,20 @@ function validateName() {
     nameError.textContent = "";
   }
 }
+function validateNumber() {
+  const value = numberInput.value.trim();
+  const numberPattern = value.replace(/\D/g, "");
+  const allowedCharacters = /^[+-0-9\s]+$/;
+
+  if (value === "") {
+    numberError.textContent = "Nomor wajib diisi!";
+  } else if (numberPattern.length < 10 || numberPattern.length > 13) {
+    numberError.textContent = "Nomor harus terdiri dari 10-13 angka";
+  } else if (!allowedCharacters.test(value)) {
+    numberError.textContent = "Hanya boleh memakai angka dan tanda + atau -";
+  } else {
+    numberError.textContent = "";
+  }
+}
 nameInput.addEventListener("blur", validateName);
+numberInput.addEventListener("blur", validateNumber);
