@@ -26,7 +26,7 @@ function validateName() {
 function validateNumber() {
   const value = numberInput.value.trim();
   const numberPattern = value.replace(/\D/g, "");
-  const allowedCharacters = /^[+-0-9\s]+$/;
+  const allowedCharacters = /^[-+0-9\s]+$/;
 
   if (value === "") {
     numberError.textContent = "Nomor wajib diisi!";
@@ -37,6 +37,8 @@ function validateNumber() {
   } else {
     numberError.textContent = "";
   }
+  console.log("value:", value);
+  console.log("test result:", allowedCharacters.test(value));
 }
 nameInput.addEventListener("blur", validateName);
 numberInput.addEventListener("blur", validateNumber);
