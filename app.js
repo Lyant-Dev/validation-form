@@ -40,5 +40,18 @@ function validateNumber() {
   console.log("value:", value);
   console.log("test result:", allowedCharacters.test(value));
 }
+function validateEmail() {
+  const value = emailInput.value.trim();
+  const emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+
+  if (value === "") {
+    emailError.textContent = "Email wajib diisi!";
+  } else if (!emailPattern.test(value)) {
+    emailError.textContent = "Format email salah!";
+  } else {
+    emailError.textContent = "";
+  }
+}
 nameInput.addEventListener("blur", validateName);
 numberInput.addEventListener("blur", validateNumber);
+emailInput.addEventListener("blur", validateEmail);
