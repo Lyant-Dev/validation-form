@@ -52,6 +52,21 @@ function validateEmail() {
     emailError.textContent = "";
   }
 }
+function validateMessage() {
+  const value = messageInput.value.trim();
+  const messagePattern = /^[-+0-9a-zA-Z]+$/;
+  if ((value = "")) {
+    messageError.textContent = "Pesan wajib di isi";
+  } else if (value.length < 15 || value.length > 80) {
+    messageError.textContent = "Masukkan minimal 15 dan maksimal 80 karakter";
+  } else if (!messagePattern.test()) {
+    messageError.textContent = "Isi pesan dengan benar!";
+  } else {
+    messageError.textContent = "";
+  }
+}
+
 nameInput.addEventListener("blur", validateName);
 numberInput.addEventListener("blur", validateNumber);
 emailInput.addEventListener("blur", validateEmail);
+messageInput.addEventListener("blur", validateMessage);
