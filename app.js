@@ -37,8 +37,6 @@ function validateNumber() {
   } else {
     numberError.textContent = "";
   }
-  console.log("value:", value);
-  console.log("test result:", allowedCharacters.test(value));
 }
 function validateEmail() {
   const value = emailInput.value.trim();
@@ -54,7 +52,7 @@ function validateEmail() {
 }
 function validateMessage() {
   const value = messageInput.value.trim();
-  const messagePattern = /^[-+0-9a-zA-Z]+$/;
+  const messagePattern = /[a-zA-Z0-9]+/;
   if (value === "") {
     messageError.textContent = "Pesan wajib di isi";
   } else if (value.length < 15 || value.length > 500) {
