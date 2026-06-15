@@ -55,11 +55,11 @@ function validateEmail() {
 function validateMessage() {
   const value = messageInput.value.trim();
   const messagePattern = /^[-+0-9a-zA-Z]+$/;
-  if ((value = "")) {
+  if (value === "") {
     messageError.textContent = "Pesan wajib di isi";
-  } else if (value.length < 15 || value.length > 80) {
-    messageError.textContent = "Masukkan minimal 15 dan maksimal 80 karakter";
-  } else if (!messagePattern.test()) {
+  } else if (value.length < 15 || value.length > 500) {
+    messageError.textContent = "Masukkan minimal 15 dan maksimal 500 karakter";
+  } else if (!messagePattern.test(value)) {
     messageError.textContent = "Isi pesan dengan benar!";
   } else {
     messageError.textContent = "";
