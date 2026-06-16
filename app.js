@@ -4,6 +4,7 @@ const numberInput = document.querySelector("#number");
 const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
 const submitBtn = document.querySelector(".submit-btn");
+const sent = document.querySelector("#success-message");
 const namePattern = /^[a-zA-Z\s']+$/;
 
 const nameError = document.querySelector("#name-error");
@@ -68,3 +69,20 @@ nameInput.addEventListener("blur", validateName);
 numberInput.addEventListener("blur", validateNumber);
 emailInput.addEventListener("blur", validateEmail);
 messageInput.addEventListener("blur", validateMessage);
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  validateName();
+  validateNumber();
+  validateEmail();
+  validateMessage();
+  if (
+    nameError.textContent === "" &&
+    numberError.textContent === "" &&
+    emailError.textContent === "" &&
+    messageError.textContent === ""
+  ) {
+    form.style.display = "none";
+    sent.style.display = "block";
+  }
+});

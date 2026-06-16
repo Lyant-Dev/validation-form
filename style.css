@@ -62,7 +62,6 @@ body {
   margin-bottom: 1.5rem;
   font-weight: 600;
   min-height: 1.6rem;
-
 }
 .form-input-group:has(textarea) {
   align-items: center; /* sejajar atas */
@@ -92,4 +91,11 @@ body {
   color: hsl(0, 0%, 100%);
   font-weight: 500;
   border-radius: 0.5rem;
+}
+#success-message {
+  display: none;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin: 2rem 0;
+  text-align: center;
 }
