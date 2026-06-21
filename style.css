@@ -124,3 +124,31 @@ body {
 .error-icon.active {
   display: inline;
 }
+
+/* BREAKPOINT  */
+
+/* MOBILE  */
+@media screen and (max-width: 480px) {
+  .form-container {
+    margin: 0 0.5rem;
+  }
+  .form-input-group {
+    display: grid;
+    grid-template-areas:
+      "label label"
+      "input icon";
+    grid-template-columns: 1fr auto;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 1.75rem;
+  }
+  label {
+    grid-area: label;
+  }
+  input {
+    grid-area: input;
+  }
+  .error-icon {
+    grid-area: icon;
+  }
+}
