@@ -128,6 +128,32 @@ body {
 /* BREAKPOINT  */
 
 /* MOBILE  */
+
+@media screen and (max-width: 620px) {
+  .form-container {
+    margin: 0.5rem;
+  }
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-bottom: 1px solid hsl(203, 19%, 24%);
+    font-size: 1.75rem;
+    font-weight: 200;
+    padding: 1rem;
+    background: transparent;
+  }
+  .form-input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 1.75rem;
+    font-weight: 300;
+    gap: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .form-container {
     margin: 0 0.5rem;
