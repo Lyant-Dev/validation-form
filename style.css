@@ -132,7 +132,7 @@ body {
 
 @media screen and (max-width: 620px) {
   .form-container {
-    margin: 1.25rem 1.25rem;
+    margin: 1.5rem
   }
   .form-row input,
   .form-row textarea {
@@ -157,7 +157,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .form-container {
-    margin: 1.25rem 1.25rem;
+    margin: 1.5rem;
   }
   .form-input-group {
     display: grid;
